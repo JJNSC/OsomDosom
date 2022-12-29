@@ -8,20 +8,18 @@ import com.shop.dto.Review;
 import com.shop.service.ReviewService;
 
 @SpringBootTest
-class reviewInsert {
+class reviewDelete {
 
 	@Autowired
 	ReviewService service;
 	@Test
 	void contextLoads() {
-		
-		Review obj = new Review(1, 7,"소고기 맛있네요 .. 굿");
 		try {
-			service.register(obj);
-			System.out.println("리뷰 등록 테스트 성공!");
+			service.remove(2);
+			System.out.println("리뷰 삭제 테스트 성공!");
 		} catch (Exception e) {
-			System.out.println("리뷰 등록 실패...");
-			e.printStackTrace();
+			System.out.println("리뷰 삭제 실패...");
+			//e.printStackTrace();
 		}
 		
 	}

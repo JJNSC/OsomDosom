@@ -14,7 +14,7 @@ class reviewUpdate {
 	ReviewService service;
 	@Test
 	void contextLoads() {
-		Review obj = new Review(1,"리뷰 수정됨?");
+		Review obj = new Review(4,"4번 리뷰 수정중..");
 		try {
 			service.modify(obj);
 			System.out.println("리뷰 수정 테스트 성공!");

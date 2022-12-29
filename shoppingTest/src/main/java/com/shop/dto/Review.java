@@ -18,6 +18,9 @@ public class Review {
 	private int item_no;
 	private String review;
 	private Date rdate;
+	
+	private String cust_name;
+	private String item_name;
 	public Review(int cust_no, int item_no, String review) {
 		this.cust_no = cust_no;
 		this.item_no = item_no;

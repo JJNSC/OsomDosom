@@ -1,5 +1,7 @@
 package com.shop.review;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,19 +10,21 @@ import com.shop.dto.Review;
 import com.shop.service.ReviewService;
 
 @SpringBootTest
-class reviewInsert {
+class reviewItemSelect {
 
 	@Autowired
 	ReviewService service;
 	@Test
 	void contextLoads() {
-		
-		Review obj = new Review(1, 7,"소고기 맛있네요 .. 굿");
+		List<Review> objs=null;
 		try {
-			service.register(obj);
-			System.out.println("리뷰 등록 테스트 성공!");
+			objs=service.searchItemReview(7);
+			for(Review obj : objs) {
+				System.out.println(obj);
+			}
+			System.out.println("상품의 리뷰 모두 선택 테스트 성공!");
 		} catch (Exception e) {
-			System.out.println("리뷰 등록 실패...");
+			System.out.println("상품의 리뷰 모두 선택 실패...");
 			e.printStackTrace();
 		}
 		
