@@ -17,4 +17,14 @@ public class Ship {
 	private String ship_name;
 	private String ship_addr;
 	private String ship_tel;
+	
+	public Ship(String ship_name, String ship_addr, String ship_tel, int ship_no) {
+		super();
+		this.ship_no = ship_no;
+		this.ship_name = ship_name;
+		this.ship_addr = ship_addr;
+		this.ship_tel = ship_tel;
+	}
+	
+	
 }

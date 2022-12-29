@@ -4,11 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureOrder;
+import org.springframework.stereotype.Service;
 
 import com.shop.dto.Ship;
 import com.shop.frame.MyService;
 import com.shop.mapper.ShipMapper;
 
+@Service
 public class ShipService implements MyService<Integer, Ship> {
 	
 	@Autowired
