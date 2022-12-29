@@ -13,11 +13,14 @@ import lombok.ToString;
 @Setter
 @Getter
 @ToString
-public class Item {
-	private int item_no;
-	private int cate_no;
+public class Customer {
+	
+	private int cust_no; 
 	private String name;
-	private int price;
-	private String desc;
-	private Date item_rdate;
+	private String id;
+	private String pwd;
+	private String tel;
+	private String email;
+	private Date cust_rdate;
+	
 }
