@@ -1,6 +1,5 @@
 package com.shop.dto;
 
-import java.util.Date;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,5 +15,5 @@ import lombok.ToString;
 public class Categories {
 	private int cate_no;
 	private String cate_name;
-	private int cate_no2;
+	private int cat_no2;
 }

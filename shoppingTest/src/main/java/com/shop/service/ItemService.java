@@ -2,19 +2,21 @@ package com.shop.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.shop.dto.Order;
+import com.shop.dto.Item;
 import com.shop.frame.MyService;
-import com.shop.mapper.OrderMapper;
+import com.shop.mapper.ItemMapper;
 
 @Service
-public class OrderService implements MyService<Integer, Order>{
+public class ItemService implements MyService<Integer, Item>{
 	@Autowired
-	OrderMapper mapper;
+	ItemMapper mapper;
+
 	@Override
-	public void register(Order v) throws Exception {
+	public void register(Item v) throws Exception {
 		mapper.insert(v);
 		
 	}
@@ -26,19 +28,18 @@ public class OrderService implements MyService<Integer, Order>{
 	}
 
 	@Override
-	public void modify(Order v) throws Exception {
+	public void modify(Item v) throws Exception {
 		mapper.update(v);
 		
 	}
 
 	@Override
-	public Order get(Integer k) throws Exception {
-		return (Order) mapper.select(k);
+	public Item get(Integer k) throws Exception {
+		return mapper.select(k);
 	}
 
 	@Override
-	public List<Order> get() throws Exception {
+	public List<Item> get() throws Exception {
 		return mapper.selectall();
 	}
-
 }
