@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shop.dto.Order;
-import com.shop.frame.MyMapper;
 import com.shop.frame.MyService;
+import com.shop.mapper.OrderMapper;
 
 @Service
 public class OrderService implements MyService<Integer, Order>{

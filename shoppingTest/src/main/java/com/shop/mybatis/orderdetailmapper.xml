@@ -5,11 +5,11 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 <mapper namespace="com.shop.mapper.OrderDetailMapper">
 
 	
-	<select id="select" parametertype="Order" resultType="Order">
-		SELECT * FROM order WHERE id=#{id} 
+	<select id="select" parameterType="Integer" resultType="Orderdetail">
+		SELECT * FROM orderdetail WHERE id=#{id} 
 	</select>
-	<select id="selectall" resultType="Order">
-		SELECT * FROM order
+	<select id="selectall" resultType="Orderdetail">
+		SELECT * FROM orderdetail
 	</select>
 	<select id="insert">
 		INSERT INTO order VALUES (#{orderdetail_code},#{item_no}
@@ -21,3 +21,4 @@ PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
 	<select id="delete">
 	
 	</select>
+</mapper>
