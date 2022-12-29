@@ -26,5 +26,5 @@ public class Ship {
 		this.ship_tel = ship_tel;
 	}
 	
-	
+	//
 }
