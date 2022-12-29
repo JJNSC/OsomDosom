@@ -6,16 +6,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.shop.dto.OrderDetail;
-import com.shop.frame.MyMapper;
 import com.shop.frame.MyService;
+import com.shop.mapper.OrderDetailMapper;
 
 @Service
 public class OrderDetailService implements MyService<Integer, OrderDetail>{
 	@Autowired
-	OrderDailMapper mapper;
+	OrderDetailMapper mapper;
+
 	@Override
 	public void register(OrderDetail v) throws Exception {
-		mapper.select(v);
+		mapper.insert(v);
 	}
 
 	@Override
@@ -31,7 +32,7 @@ public class OrderDetailService implements MyService<Integer, OrderDetail>{
 
 	@Override
 	public OrderDetail get(Integer k) throws Exception {
-		return (OrderDetail) mapper.select(k);
+		return mapper.select(k);
 	}
 
 	@Override

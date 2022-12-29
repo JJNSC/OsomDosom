@@ -14,6 +14,7 @@ public class OrderDetail {
 	public int orderdetail_code;
 	public int item_no;
 	public int ship_no;
-	public int count;
+	public int cnt;
 	public String request;
+	public int totalprice;
 }
